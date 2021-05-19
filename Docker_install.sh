@@ -1,5 +1,5 @@
 #!/bin/bash
-#check if Docker is instaleed
+#check if Docker is instaled
 if 
 	rpm -qa | grep docker-ce-  2>&1 > /dev/null; then echo "Docker is already installed."
 #install Docker
