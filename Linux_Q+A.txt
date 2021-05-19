@@ -13,7 +13,7 @@ Linux
 	A) All SELinux error are logged in audit.log and sometime messages. We can use journalctl to get basic error message, example "journalctl -t setroubleshoot --since=14:20" . Then use sealert -l and message id to get more information about the alert and how to correct. 
     
 	Q) Write the commands to add 30GB disk space to a logical volume named "docker" that belongs to a logical group named "docker-group".
-	A) lvcreate -L 30G -n docker docker-group
+	A) lvcreate -L +30G -n docker docker-group
 
 	Q) In the root of this repository, create a Bash script called "listit.sh", when executed, this script must do the following (in order):
         Create a file called directories.list that contains the directory names only of the current directory.
