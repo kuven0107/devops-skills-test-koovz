@@ -1,0 +1,6 @@
+Q) How would you ensure any change made to this Dockerfile is source controlled, approved, tested and deployed. 
+Explain which tools you will use as if this was going into a production environment.
+A) Git is used for Version control for all soltware programs update and updates. When Code is checked it, 
+it can be set to sent to approvers before it is uploaded and test on QA and then again put into production and approved again before 
+taken to production. 
+All changed can be tracked and managed with git hub. 
