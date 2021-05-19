@@ -1,0 +1,39 @@
+OpenShift / OKD
+
+For the questions below, please make use of the OpenShift CLI (oc) where applicable.
+
+Q)    Write the command used to login to a remote OpenShift cluster.
+A) oc login https://opencontainer.bayportfinance.com
+
+Q)    Write the command to add the "cluster-admin" cluster role to a user called "clark".
+A) oc adm policy add-cluster-role-to-user cluster-admin clark
+
+Q)    Write the command used to list all pods in the "smallville" project (namespace).
+A)  oc get pods -n smallville
+
+Q)    Write the command to scale an application (deployment config) called "dailyplanet" to 2 pods.
+A) oc scale dc dailyplanet --replicas=2
+
+Q)    Write the command to gain remote shell access to a pod called "lex" in the "smallville" project (namespace).
+A) oc rsh lex 
+
+Q)    Write the command to export a secret called "loislane" in JSon format, the secret is in the "dailyplanet" project (namespace).
+A) oc get -o json --namespace=dailyplanet > project.yaml
+
+Q)    Add a file called "Krypton" (in YAML format) to this repo that contains the resource defintion for a Persistent Volume Claim with the following properties:
+        Points to a Persistent Volume called "zod".
+        Requests 5GB of storage.
+        The volume can be mounted as read-write by more than one node.
+A) apiVersion: "v1"
+kind: "PersistentVolumeClaim"
+metadata:
+  name: "claim"
+spec:
+  accessModes:
+    - "read-write"
+  resources:
+    requests:
+      storage: "5Gi"
+  volumeName: "zod"
+
+
